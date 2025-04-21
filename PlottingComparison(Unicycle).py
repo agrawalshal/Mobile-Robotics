@@ -256,3 +256,6 @@ def run_unicycle_comparison():
 
     return (true_states_ekf, estimated_states_ekf, controls_ekf,
             true_states_rsekf, estimated_states_rsekf, controls_rsekf)
+
+results = run_unicycle_comparison()
+true_states_ekf, estimated_states_ekf, controls_ekf, true_states_rsekf, estimated_states_rsekf, controls_rsekf = results
