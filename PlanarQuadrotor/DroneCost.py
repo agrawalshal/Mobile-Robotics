@@ -1,4 +1,4 @@
-def drone_cost(state, control, t, goal_state=np.array([1.0, 5.0, 0.0, 0.0, 0.0, 0.0, 2.0])):
+def drone_cost(state, control, t, goal_state=np.array([1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0])):
     if control is None:  # Terminal cost
         # Higher weights for terminal cost
         pos_cost = 100 * ((state[0] - goal_state[0])**2 + (state[1] - goal_state[1])**2)
@@ -58,7 +58,7 @@ def simulate_drone_with_both_filters(num_steps=100, dt=0.05, mu_rs=4e-3, seed=42
     horizon = 20        # Prediction horizon for DDP
 
     # Initialize true state: drone at origin with known mass initially
-    true_state = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 5.0])
+    true_state = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0])
 
     # Initialize standard EKF
     ekf = RiskSensitiveEKF(state_dim, measurement_dim, dt, mu=0.0)  # mu=0 gives standard EKF
