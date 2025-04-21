@@ -83,7 +83,7 @@ The implementation demonstrates that RS-EKF consistently outperforms standard EK
 
 ## Dependencies
 
-- Python 3.x
+- Python 3.11.12
 - NumPy
 - SciPy
 - Matplotlib (for visualization)
